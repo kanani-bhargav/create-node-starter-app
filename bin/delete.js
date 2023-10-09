@@ -7,7 +7,6 @@ if (fs.existsSync(gitDirectory)) {
   try {
     // Delete the .git directory recursively
     fs.rmdirSync(gitDirectory, { recursive: true });
-    console.log('.git directory deleted successfully');
   } catch (err) {
     console.error('Error deleting .git directory:', err);
   }
@@ -30,7 +29,6 @@ function deleteDirectoryRecursive(directoryPath) {
     });
     // Delete the empty directory itself
     fs.rmdirSync(directoryPath);
-    console.log(`Deleted directory: ${directoryPath}`);
   } else {
     console.error(`Directory does not exist: ${directoryPath}`);
   }
