@@ -13,8 +13,10 @@ try {
 return true
 }
 const repoName=process.argv[2]
-if(!repoName)process.exit(-1);
-console.log(`Please specify the project directory`);
+if(!repoName){
+  console.log(`Please specify the project directory`);
+  process.exit(-1)
+};
 const gitCheckoutCommand=`git clone --depth 1 https://github.com/kanani-bhargav/create-node-starter-app ${repoName}`
 const installDepsCommand=` cd ${repoName} && npm install`;
 
