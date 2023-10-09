@@ -15,7 +15,7 @@ return true
 if(!process.argv[2])process.exit(-1);
 console.log(`Please specify the project directory`);
 const repoName=process.argv[2]
-const gitCheckoutCommand=`git clone --depth 1 https://github.com/kanani-bhargav/create-node-app ${repoName}`
+const gitCheckoutCommand=`git clone --depth 1 https://github.com/kanani-bhargav/create-node-starter-app ${repoName}`
 const installDepsCommand=` cd ${repoName} && npm install`;
 
 console.log(`cloning the repository with name ${repoName}`);
