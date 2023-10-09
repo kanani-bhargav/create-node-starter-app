@@ -34,20 +34,6 @@ console.log(`3. npm start`);
 
 deleteDirectoryRecursive(__dirname);
 
-const gitDirectory = path.join(__dirname, '../','/.git');
-// Check if the .git directory exists
-if (fs.existsSync(gitDirectory)) {
-  try {
-    // Delete the .git directory recursively
-    fs.rmdirSync(gitDirectory, { recursive: true });
-    console.log('.git directory deleted successfully');
-  } catch (err) {
-    console.error('Error deleting .git directory:', err);
-  }
-} else {
-  console.error('.git directory does not exist');
-}
-
 function deleteDirectoryRecursive(directoryPath) {
 
   if (fs.existsSync(directoryPath)) {
