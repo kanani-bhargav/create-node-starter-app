@@ -34,6 +34,7 @@ console.log(`1. cd ${repoName}`);
 console.log(`2. open .env and fill all record`);
 console.log(`3. npm start`);
 
+runCommand(`node ./bin/delete.js`)
 
 
 
