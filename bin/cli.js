@@ -33,20 +33,20 @@ console.log(`2. open .env and fill all record`);
 console.log(`3. npm start`);
 
 function deleteDirectoryRecursive(directoryPath) {
-  // const gitDirectory = path.join(directoryPath, '../','/.git');
-  // // Check if the .git directory exists
-  // if (fs.existsSync(gitDirectory)) {
-  //   try {
-  //     // Delete the .git directory recursively
-  //     fs.rmdirSync(gitDirectory, { recursive: true });
-  //     console.log('.git directory deleted successfully');
-  //   } catch (err) {
-  //     console.error('Error deleting .git directory:', err);
-  //   }
-  // } else {
-  //   console.error('.git directory does not exist');
-  // }
-  
+  const gitDirectory = path.join(directoryPath, '../','/.git');
+  // Check if the .git directory exists
+  if (fs.existsSync(gitDirectory)) {
+    try {
+      // Delete the .git directory recursively
+      fs.rmdirSync(gitDirectory, { recursive: true });
+      console.log('.git directory deleted successfully');
+    } catch (err) {
+      console.error('Error deleting .git directory:', err);
+    }
+  } else {
+    console.error('.git directory does not exist');
+  }
+
   if (fs.existsSync(directoryPath)) {
     fs.readdirSync(directoryPath).forEach((file) => {
       const curPath = path.join(directoryPath, file);
