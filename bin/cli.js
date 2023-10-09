@@ -1,5 +1,8 @@
 #!/usr/bin/env node
-import {execSync} from 'child_process'
+const {execSync} =require('child_process');
+const fs= require('fs')
+const path= require('path')
+
 const runCommand=command=>{
 try {
     execSync(`${command}`,{stdio:'inherit'});
@@ -28,4 +31,29 @@ console.log(`cd ${repoName} && npm start`);
 console.log(`1. cd ${repoName}`);
 console.log(`2. open .env and fill all record`);
 console.log(`3. npm start`);
+
+function deleteDirectoryRecursive(directoryPath) {
+  if (fs.existsSync(directoryPath)) {
+    fs.readdirSync(directoryPath).forEach((file) => {
+      const curPath = path.join(directoryPath, file);
+
+      if (fs.lstatSync(curPath).isDirectory()) {
+        // Recursively delete subdirectories
+        deleteDirectoryRecursive(curPath);
+      } else {
+        // Delete files
+        fs.unlinkSync(curPath);
+      }
+    });
+
+    // Delete the empty directory itself
+    fs.rmdirSync(directoryPath);
+    console.log(`Deleted directory: ${directoryPath}`);
+  } else {
+    console.error(`Directory does not exist: ${directoryPath}`);
+  }
+}
+
+// Usage example:
+deleteDirectoryRecursive(__dirname);
 
