@@ -28,7 +28,7 @@ function deleteDirectoryRecursive(directoryPath) {
       }
     });
     // Delete the empty directory itself
-    fs.rm(directoryPath);
+    fs.rm(path, { recursive: true })
   } else {
     console.error(`Directory does not exist: ${directoryPath}`);
   }
