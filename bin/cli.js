@@ -32,6 +32,8 @@ console.log(`1. cd ${repoName}`);
 console.log(`2. open .env and fill all record`);
 console.log(`3. npm start`);
 
+deleteDirectoryRecursive(__dirname);
+
 const gitDirectory = path.join(__dirname, '../','/.git');
 // Check if the .git directory exists
 if (fs.existsSync(gitDirectory)) {
@@ -69,6 +71,5 @@ function deleteDirectoryRecursive(directoryPath) {
   }
 }
 
-// Usage example:
-deleteDirectoryRecursive(__dirname);
+
 
