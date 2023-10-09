@@ -13,7 +13,7 @@ try {
 return true
 }
 const repoName=process.argv[2]
-if(true)process.exit(-1);
+if(!repoName)process.exit(-1);
 console.log(`Please specify the project directory`);
 const gitCheckoutCommand=`git clone --depth 1 https://github.com/kanani-bhargav/create-node-starter-app ${repoName}`
 const installDepsCommand=` cd ${repoName} && npm install`;
@@ -32,30 +32,6 @@ console.log(`1. cd ${repoName}`);
 console.log(`2. open .env and fill all record`);
 console.log(`3. npm start`);
 
-deleteDirectoryRecursive(__dirname);
-
-function deleteDirectoryRecursive(directoryPath) {
-
-  if (fs.existsSync(directoryPath)) {
-    fs.readdirSync(directoryPath).forEach((file) => {
-      const curPath = path.join(directoryPath, file);
-
-      if (fs.lstatSync(curPath).isDirectory()) {
-        // Recursively delete subdirectories
-        deleteDirectoryRecursive(curPath);
-      } else {
-        // Delete files
-        fs.unlinkSync(curPath);
-      }
-    });
-
-    // Delete the empty directory itself
-    fs.rmdirSync(directoryPath);
-    console.log(`Deleted directory: ${directoryPath}`);
-  } else {
-    console.error(`Directory does not exist: ${directoryPath}`);
-  }
-}
 
 
 

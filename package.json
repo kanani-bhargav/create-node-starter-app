@@ -1,6 +1,6 @@
 {
   "name": "create-node-starter-app",
-  "version": "1.2.9",
+  "version": "1.4.0",
   "description": "it is kickstart code for backend development",
   "main": "index.js",
   "bin": "./bin/cli.js",
