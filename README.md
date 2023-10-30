@@ -19,34 +19,34 @@ My Node.js starter app is a lightweight, opinionated project template for kickst
 Explain your project's structure to help users understand how different components are organized within your starter kit. You can use a tree structure or bullet points to describe the layout.
 
 [repo-name]/
- ## ├── src/
- ## │    ├── config/
- ## │   │   └── config.js
- ## │   ├── controllers/
- ## │   │   └── user.controller.js
- ## │   ├── db/
- ## │   │   └──dbConnection.js
- ## │   ├── helpers/
- ## │   │   ├── crons.js
- ## │   │   └── pick.js
- ## │   ├── middleware/
- ## │   │   ├── auth.js
- ## │   │   ├── upload.js
- ## │   │   └── validate.js
- ## │   ├── models/
- ## │   │   └── user.model.js
- ## │   ├── routes/
- ## │   │   └── user.route.js
- ## │   ├── services/
- ## │   │   └── user.service.js
- ## │   ├── validations/
- ## │   │   └── user.validation.js
- ## │   └── index.js
- ## ├── .env
- ## ├── .gitignore
- ## ├── .nvmrc
- ## ├── package.json
- ## └── README.md
+ # ├── src/
+ # │    ├── config/
+ # │   │   └── config.js
+ # │   ├── controllers/
+ # │   │   └── user.controller.js
+ # │   ├── db/
+ # │   │   └──dbConnection.js
+ # │   ├── helpers/
+ # │   │   ├── crons.js
+ # │   │   └── pick.js
+ # │   ├── middleware/
+ # │   │   ├── auth.js
+ # │   │   ├── upload.js
+ # │   │   └── validate.js
+ # │   ├── models/
+ # │   │   └── user.model.js
+ # │   ├── routes/
+ # │   │   └── user.route.js
+ # │   ├── services/
+ # │   │   └── user.service.js
+ # │   ├── validations/
+ # │   │   └── user.validation.js
+ # │   └── index.js
+ # ├── .env
+ # ├── .gitignore
+ # ├── .nvmrc
+ # ├── package.json
+ # └── README.md
 
 ## 3. Features
 List the key features that your professional Node.js starter kit offers. Highlight what sets it apart from other solutions.
