@@ -20,28 +20,28 @@ Explain your project's structure to help users understand how different componen
 
 [repo-name]/
  * ├── src/
- * │    ├── config/
- * │   │   └── config.js
- * │   ├── controllers/
- * │   │   └── user.controller.js
- * │   ├── db/
- * │   │   └──dbConnection.js
- * │   ├── helpers/
- * │   │   ├── crons.js
- * │   │   └── pick.js
- * │   ├── middleware/
- * │   │   ├── auth.js
- * │   │   ├── upload.js
- * │   │   └── validate.js
- * │   ├── models/
- * │   │   └── user.model.js
- * │   ├── routes/
- * │   │   └── user.route.js
- * │   ├── services/
- * │   │   └── user.service.js
- * │   ├── validations/
- * │   │   └── user.validation.js
- * │   └── index.js
+ * │     ├── config/
+ * │     │   └── config.js
+ * │     ├── controllers/
+ * │     │   └── user.controller.js
+ * │     ├── db/
+ * │     │   └──dbConnection.js
+ * │     ├── helpers/
+ * │     │   ├── crons.js
+ * │     │   └── pick.js
+ * │     ├── middleware/
+ * │     │   ├── auth.js
+ * │     │   ├── upload.js
+ * │     │   └── validate.js
+ * │     ├── models/
+ * │     │   └── user.model.js
+ * │     ├── routes/
+ * │     │   └── user.route.js
+ * │     ├── services/
+ * │     │   └── user.service.js
+ * │     ├── validations/
+ * │     │   └── user.validation.js
+ * │     └── index.js
  * ├── .env
  * ├── .gitignore
  * ├── .nvmrc
