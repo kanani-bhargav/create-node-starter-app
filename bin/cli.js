@@ -36,9 +36,6 @@ console.log(`1. cd ${repoName}`);
 console.log(`2. open .env and change detail according project`);
 console.log(`3. npm start`);
 
-if (repoName == ".") {
-  runCommand(`node ./bin/delete.js`);
-}else{
-  runCommand(`cd ${repoName}`);
-  runCommand(`node ./bin/delete.js`);
-}
+runCommand(`cd ${repoName}`);
+runCommand(`node ./bin/delete.js`);
+
